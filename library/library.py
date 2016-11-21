@@ -66,14 +66,13 @@ def remove_book(filename, isbn):
 def check_out(filename, isbn, s_id):
     data = open_library(filename)
     books = data[1]
-
-    # Find a way to mark a book as checked out. Be sure to associate
+    student=input("whats your id?")
+    books=("checked out by %s"% student)# Find a way to mark a book as checked out. Be sure to associate
     # the book with the student who borrowed it!
-
+    books = data
 
     # And again save the data here
-
-    pass
+check_out(,1215,1234)
 
 
 def return_book(filename, isbn):
