@@ -42,7 +42,7 @@ def add_book(filename, isbn, title, author):
     data = open_library(filename)
     books = data[1]
 
-    # Now how can we add books to the data?
+    books[isbn] = {'author': author, 'title': title,'checkout' : False}    # Now how can we add books to the data?
     # In the space below, write code that adds the key isbn
     # and the value {'title':title, 'author':author}
     # to the books object.
@@ -79,11 +79,9 @@ def check_out(filename, isbn, s_id):
 def return_book(filename, isbn):
     data = open_library(filename)
     books = data[1]
-
-    # Now ensure that the book is no longer checked out and save the changes
+    #Now ensure that the book is no longer checked out and save the changes
     # to the library.
 
-    pass
 
 
 def status(filename):
