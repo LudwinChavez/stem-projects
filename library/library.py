@@ -42,11 +42,11 @@ def add_book(filename, isbn, title, author):
     data = open_library(filename)
     books = data[1]
 
-    # Now how can we add books to the data?
+    books[isbn] = {'author': author, 'title': title}  # Now how can we add books to the data?
     # In the space below, write code that adds the key isbn
     # and the value {'title':title, 'author':author}
     # to the books object.
-
+    books
     # Finally, write code that writes the new data to the library
     # Do we need to return anything?
     pass
@@ -66,23 +66,22 @@ def remove_book(filename, isbn):
 def check_out(filename, isbn, s_id):
     data = open_library(filename)
     books = data[1]
-    student=input("whats your id?")
-    books=("checked out by %s"% student)# Find a way to mark a book as checked out. Be sure to associate
+
+    # Find a way to mark a book as checked out. Be sure to associate
     # the book with the student who borrowed it!
-    books = data
+
 
     # And again save the data here
-check_out(,1215,1234)
+
+    pass
 
 
 def return_book(filename, isbn):
     data = open_library(filename)
     books = data[1]
-
-    # Now ensure that the book is no longer checked out and save the changes
+    #Now ensure that the book is no longer checked out and save the changes
     # to the library.
 
-    pass
 
 
 def status(filename):
@@ -93,5 +92,31 @@ def status(filename):
     # and one of all available books.
 
     pass
+
+# Main loop
+while True:
+    print('=' * 21)
+    print('Library System')
+    print('=' * 21)
+    print('1. Add books to the library')
+    print('2. Check out a book')
+    print('3. Return a book')
+    print('4. View library status')
+    print('Q. Quit')
+    m = input('Select an option from above or enter Q to quit. ')
+    if m.upper() == 'Q':
+        break
+
+    # replace 'pass' with appropriate inputs and function calls.
+    elif m == '1':
+        pass
+    elif m == '2':
+        pass
+    elif m == '3':
+        pass
+    elif m == '4':
+        pass
+    else:
+        print('Invalid selection.')
 
 
