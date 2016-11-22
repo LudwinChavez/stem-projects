@@ -63,9 +63,22 @@ def remove_book(filename, isbn):
     pass
 
 
-def check_out(filename, isbn, s_id):
+def check_out(filename,book, isbn, s_id):
     data = open_library(filename)
     books = data[1]
+    student_who_borrowed=s_id
+
+    book="checked out"
+
+
+    if book is data:
+        if book:
+            books="checked out"
+            print("book has been checked out.")
+
+    else:
+        return "book is not found"
+        print("book is not found")
 
     # Find a way to mark a book as checked out. Be sure to associate
     # the book with the student who borrowed it!
@@ -73,7 +86,7 @@ def check_out(filename, isbn, s_id):
 
     # And again save the data here
 
-    pass
+
 
 
 def return_book(filename, isbn):
@@ -87,11 +100,12 @@ def return_book(filename, isbn):
 def status(filename):
     data = open_library(filename)
     books = data[1]
-
+    print(check_out)
+    print({data:books})
     # Print out two lists - one of all books currently checked out,
     # and one of all available books.
 
-    pass
+
 
 # Main loop
 while True:
