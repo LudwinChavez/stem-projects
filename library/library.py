@@ -66,14 +66,13 @@ def remove_book(filename, isbn):
 def check_out(filename, isbn, s_id):
     data = open_library(filename)
     books = data[1]
-
-    # Find a way to mark a book as checked out. Be sure to associate
+    student=input("whats your id?")
+    books=("checked out by %s"% student)# Find a way to mark a book as checked out. Be sure to associate
     # the book with the student who borrowed it!
-
+    books = data
 
     # And again save the data here
-
-    pass
+check_out(,1215,1234)
 
 
 def return_book(filename, isbn):
@@ -94,31 +93,5 @@ def status(filename):
     # and one of all available books.
 
     pass
-
-# Main loop
-while True:
-    print('=' * 21)
-    print('Library System')
-    print('=' * 21)
-    print('1. Add books to the library')
-    print('2. Check out a book')
-    print('3. Return a book')
-    print('4. View library status')
-    print('Q. Quit')
-    m = input('Select an option from above or enter Q to quit. ')
-    if m.upper() == 'Q':
-        break
-
-    # replace 'pass' with appropriate inputs and function calls.
-    elif m == '1':
-        pass
-    elif m == '2':
-        pass
-    elif m == '3':
-        pass
-    elif m == '4':
-        pass
-    else:
-        print('Invalid selection.')
 
 

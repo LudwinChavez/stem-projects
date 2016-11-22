@@ -88,4 +88,8 @@ ENV/
 # Rope project settings
 .ropeproject
 
+# OS Junk
 .DS_Store
+
+#PyCharm Junk
+.idea*
